@@ -26,7 +26,7 @@ This will create a Rails 3.2 app in `projectname`. This script creates a new git
 Dependencies
 ------------
 
-The following are system dependencies are required for this generator to work:
+The following are system dependencies required for this generator to work:
 
 1. Ruby 1.9.2 or greater
 2. PhantomJS (for capybara's poltergeist driver)
