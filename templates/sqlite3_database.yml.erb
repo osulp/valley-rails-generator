@@ -1,0 +1,20 @@
+development: &default
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *default
+  database: db/test.sqlite3
+
+production:
+  adapter: <%%= ENV["<%= app_name.upcase %>_ADAPTER"] || "mysql2" %>
+  database: <%= app_name %>_production
+  encoding: utf8
+  min_messages: warning
+  pool: 5
+  timeout: 5000
+  username: <%%= ENV["<%= app_name.upcase %>_DB_USERNAME"]  %>
+  password: <%%= ENV["<%= app_name.upcase %>_DB_PASSWORD"]  %>
+  host: <%%= ENV["<%= app_name.upcase %>_DB_HOST"]  %>
