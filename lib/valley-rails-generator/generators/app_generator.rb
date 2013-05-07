@@ -76,6 +76,7 @@ module ValleyRailsGenerator
       build :generate_rspec
       build :configure_rspec
       build :enable_database_cleaner
+      build :configure_poltergeist
       build :setup_guard
     end
 

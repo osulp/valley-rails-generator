@@ -191,6 +191,11 @@ module ValleyRailsGenerator
         "\nCapybara.javascript_driver = :webkit"
       end
     end
+    def configure_poltergeist
+      append_file 'spec/spec_helper.rb' do
+        "\nCapybara.javascript_driver = :poltergeist"
+      end
+    end
 
     def setup_stylesheets
       copy_file 'app/assets/stylesheets/application.css',
