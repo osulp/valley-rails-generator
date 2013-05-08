@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 1.9.2'
   s.add_dependency 'bundler', '~> 1.3'
   s.add_dependency 'rails', '>=3.2.11'
-  s.authors = ['osulp']
+  s.authors = ['OSU Libraries & Press']
   s.date = Date.today.strftime('%Y-%m-%d')
 
   s.description = <<-HERE
