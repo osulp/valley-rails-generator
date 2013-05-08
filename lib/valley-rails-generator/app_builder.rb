@@ -269,7 +269,7 @@ module ValleyRailsGenerator
 
     def setup_default_rake_task
       append_file 'Rakefile' do
-        "task(:default).clear\ntask :default => [:spec]"
+        "\ntask(:default).clear\ntask :default => [:spec]"
       end
     end
 
