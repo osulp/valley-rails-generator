@@ -41,7 +41,6 @@ module ValleyRailsGenerator
 
     def customize_gemfile
       build :replace_gemfile
-      build :set_ruby_to_version_being_used
       bundle_command 'install --binstubs=bin/stubs'
     end
 
@@ -66,7 +65,6 @@ module ValleyRailsGenerator
     def setup_development_environment
       say 'Setting up the development environment'
       build :raise_on_delivery_errors
-      build :raise_on_unpermitted_parameters
     end
 
     def setup_test_environment

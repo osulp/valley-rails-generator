@@ -19,11 +19,6 @@ module ValleyRailsGenerator
         'raise_delivery_errors = false', 'raise_delivery_errors = true'
     end
 
-    def raise_on_unpermitted_parameters
-      configure_environment 'development',
-        'config.action_controller.action_on_unpermitted_parameters = :raise'
-    end
-
     def enable_factory_girl_syntax
       copy_file 'factory_girl_syntax_rspec.rb', 'spec/support/factory_girl.rb'
     end
@@ -104,11 +99,6 @@ module ValleyRailsGenerator
     def replace_gemfile
       remove_file 'Gemfile'
       copy_file 'Gemfile_clean', 'Gemfile'
-    end
-
-    def set_ruby_to_version_being_used
-      inject_into_file 'Gemfile', "\n\nruby '#{RUBY_VERSION}'",
-        after: /source 'https:\/\/rubygems.org'/
     end
 
     def enable_database_cleaner
