@@ -26,5 +26,6 @@ defaults.
   s.require_paths = ['lib']
   s.summary = "Generates a rails app with OSU Valley Library's defaults."
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.license = 'MIT'
   s.version = ValleyRailsGenerator::VERSION
 end

@@ -109,6 +109,10 @@ module ValleyRailsGenerator
       copy_file 'database_cleaner_rspec.rb', 'spec/support/database_cleaner.rb'
     end
 
+    def configure_capybara
+      copy_file 'capybara.rb', 'spec/support/capybara.rb'
+    end
+
     def configure_rspec
       remove_file '.rspec'
       copy_file 'rspec', '.rspec'
